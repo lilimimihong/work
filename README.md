@@ -10,3 +10,7 @@ npm install element-plus pinia
 npm install axios
 
 npm install -D sass-embedded
+
+##运行
+
+npm run dev
