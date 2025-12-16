@@ -1,4 +1,4 @@
-# 安装依赖
+## 安装依赖
 npm install unplugin-auto-import -D
 npm install unplugin-vue-components -D
 npm install unplugin-icons -D
