@@ -11,6 +11,6 @@ npm install axios
 
 npm install -D sass-embedded
 
-##运行
+## 运行
 
 npm run dev
