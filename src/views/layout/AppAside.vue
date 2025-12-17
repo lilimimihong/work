@@ -14,19 +14,38 @@ import { isCollapse } from './isCollapse';
                 <template #title>
                     <el-icon>
                         <IEpSetting />
-                    </el-icon><span>学习</span>
+                    </el-icon><span>首页</span>
                 </template>
 
                 <el-menu-item index="/menus"><el-icon>
                         <IEpSetting />
+                    </el-icon><span>学习</span>
+                </el-menu-item>
+
+                <el-menu-item index="/work"><el-icon>
+                        <IEpSetting />
                     </el-icon><span>工作</span>
                 </el-menu-item>
 
-                <el-menu-item index="/resource-category"><el-icon>
+                <el-menu-item index="/life"><el-icon>
                         <IEpSetting />
                     </el-icon><span>生活</span>
                 </el-menu-item>
             </el-sub-menu>
+
+            <el-sub-menu index="2">
+                <template #title>
+                    <el-icon>
+                        <IEpSetting />
+                    </el-icon><span>待办事项</span>
+                </template>
+
+                <el-menu-item index="/viewList"><el-icon>
+                        <IEpSetting />
+                    </el-icon><span>查看</span>
+                </el-menu-item>
+            </el-sub-menu>
+            
         </el-menu>
     </el-aside>
 </template>

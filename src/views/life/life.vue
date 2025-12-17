@@ -1,26 +1,26 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router"
 import { useMenus } from "@/composables/useMenus";
-import { computed } from "vue";
+import { computed } from "vue"; 
 
 const router = useRouter()
 const { allMenus, getAllMenus, handleDelete, toggleStatus } = useMenus();
 
 getAllMenus()
 
-const studyList = computed(() => {
-    return allMenus.value.filter(item => item.category === '学习')
+const lifeList = computed(() => {
+    return allMenus.value.filter(item => item.category === '生活')
 })
 </script>
 
 <template>
     <el-card class="box-card">
         <div slot="header" class="clearfix">
-            <el-button type="primary" @click="router.push('/menus/create')">添加学习任务</el-button>
+            <el-button type="primary" @click="router.push('/menus/create')">添加生活琐事</el-button>
         </div>
-        <el-table :data="studyList" border style="width: 100%">
+        <el-table :data="lifeList" border style="width: 100%">
             <el-table-column type="index" label="序号" align="center" width="80"></el-table-column>
-            <el-table-column prop="name" label="学习任务" align="center"></el-table-column>
+            <el-table-column prop="name" label="生活事项" align="center"></el-table-column>
             
             <el-table-column prop="status" label="当前状态" align="center">
                 <template #default="scope">

@@ -12,10 +12,10 @@ const router = createRouter({
         {
           path: '', 
           name: 'home',
-          component: () => import('@/views/HomeView.vue'),
+          component: () => import('@/views/menu/createOredit.vue'),
         },
         {
-          path: 'about', // 子路径不需要加 /
+          path: 'about', 
           name: 'about',
           component: () => import('../views/AboutView.vue')
         },
@@ -34,6 +34,23 @@ const router = createRouter({
           name: 'menu-edit',
           component: () => import('@/views/menu/createOredit.vue')
         },
+         {
+          path: 'work',
+          name: 'work-edit',
+          component: () => import('@/views/work/work.vue')
+        },
+        {
+          path: 'life',
+          name: 'life-edit',
+          component: () => import('@/views/life/life.vue')
+        },
+        {
+          path: 'viewList',
+          name: 'viewList-edit',
+          component: () => import('@/views/viewlist/viewList.vue')
+        },
+        
+        
       ]
     },
   ],

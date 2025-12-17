@@ -10,12 +10,12 @@ getMenuInfoById(route.params.id as string)
 
 <template>
   <el-form :model="form" label-width="auto" style="max-width: 600px" >
-    <el-form-item label="菜单名称">
+    <el-form-item label="事件名称">
       <el-input v-model="form.name" />
     </el-form-item>
-    <el-form-item label="菜单路径">
+    <!-- <el-form-item label="菜单路径">
       <el-input v-model="form.href" />
-    </el-form-item>
+    </el-form-item> -->
     <el-form-item label="上级菜单">
       <el-select v-model="form.parentId" placeholder="please select your zone">
         <el-option label="顶层菜单" :value="-1" />
@@ -25,9 +25,16 @@ getMenuInfoById(route.params.id as string)
     <el-form-item label="描述">
       <el-input v-model="form.description" />
     </el-form-item>
-    <el-form-item label="图标名称">
+    <!-- <el-form-item label="图标名称">
       <el-input v-model="form.icon" />
-    </el-form-item>
+    </el-form-item> -->
+    <el-form-item label="分类">
+  <el-select v-model="form.category" placeholder="请选择分类">
+    <el-option label="学习" value="学习" />
+    <el-option label="工作" value="工作" />
+    <el-option label="生活" value="生活" />
+  </el-select>
+</el-form-item>
    
    
     
